@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE NAVBAR</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <section id="navbar-section">
+        <nav>
+            <label class="logo">Junaid</label>
+            <ul class="nav-item">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+            <label id="icon">
+                <i class='bx bx-menu'></i>
+            </label>
+            <label id="close-icon">
+                <i class='bx bx-x'></i>
+            </label>
+        </nav>
+    </section>
+
+</body>
+
+<script>
+   const menu = document.querySelector(".nav-item");
+   const icon = document.querySelector("#icon");
+   const close_icon = document.querySelector("#close-icon")
+   
+   icon.addEventListener("click",()=>{
+        menu.style.left = "0";
+        icon.style.display="none";
+        close_icon.style.display="block";
+   })
+
+   close_icon.addEventListener("click",()=>{
+       icon.style.display="block";
+       menu.style.left = "-100%"
+   })
+
+
+
+</script>
+
+</html>
